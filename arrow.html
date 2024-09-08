@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Scroll</title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .blok:nth-of-type(odd) {
+            background-color: white;
+        }
+        
+        .blok:nth-of-type(even) {
+            background-color: black;
+        }
+
+        @keyframes border-transform {
+            0%, 100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
+            14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
+            28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
+            42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
+            56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
+            70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
+            84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
+        }
+
+        .paginacontainer {
+            height: 3000px;
+            position: relative;
+        }
+
+        .progress-wrap {
+            position: fixed;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            height: 46px;
+            width: 46px;
+            cursor: pointer;
+            display: block;
+            border-radius: 50px;
+            box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 200ms linear;
+        }
+
+        .progress-wrap.active-progress {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .progress-wrap::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            height: 46px;
+            width: 46px;
+            cursor: pointer;
+            display: block;
+            z-index: 1;
+            transition: opacity 200ms linear;
+            background: url('chevron.png') center/cover no-repeat; /* Replace with your arrow image */
+        }
+
+        .progress-wrap:hover::after {
+            opacity: 0;
+        }
+
+        .progress-wrap::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            height: 46px;
+            width: 46px;
+            cursor: pointer;
+            display: block;
+            z-index: 2;
+            transition: opacity 200ms linear;
+            background: black; /* Arrow hover color */
+            background-clip: text;
+            color: transparent;
+        }
+
+        .progress-wrap:hover::before {
+            opacity: 1;
+        }
+
+        .progress-wrap svg path { 
+            fill: none; 
+        }
+
+        .progress-wrap svg.progress-circle path {
+            stroke: rgba(0, 0, 0, 0.2); /* Progress line color */
+            stroke-width: 4;
+            box-sizing: border-box;
+            transition: stroke-dashoffset 200ms linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="paginacontainer">    
+        scroll
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+            </svg>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        (function($) { "use strict";
+
+            $(document).ready(function() {
+                "use strict";
+
+                var progressPath = document.querySelector('.progress-wrap path');
+                var pathLength = progressPath.getTotalLength();
+                progressPath.style.transition = 'none';
+                progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+                progressPath.style.strokeDashoffset = pathLength;
+                progressPath.getBoundingClientRect();
+                progressPath.style.transition = 'stroke-dashoffset 10ms linear';    
+
+                var updateProgress = function () {
+                    var scroll = $(window).scrollTop();
+                    var height = $(document).height() - $(window).height();
+                    var progress = pathLength - (scroll * pathLength / height);
+                    progressPath.style.strokeDashoffset = progress;
+                }
+
+                updateProgress();
+                $(window).scroll(updateProgress); 
+
+                var offset = 50;
+                var duration = 550;
+                jQuery(window).on('scroll', function() {
+                    if (jQuery(this).scrollTop() > offset) {
+                        jQuery('.progress-wrap').addClass('active-progress');
+                    } else {
+                        jQuery('.progress-wrap').removeClass('active-progress');
+                    }
+                });
+
+                jQuery('.progress-wrap').on('click', function(event) {
+                    event.preventDefault();
+                    jQuery('html, body').animate({scrollTop: 0}, duration);
+                    return false;
+                });
+            });
+
+        })(jQuery);
+    </script>
+</body>
+</html>
