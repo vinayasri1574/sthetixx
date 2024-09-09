@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Goldman' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <title>ROI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9e9e9;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #fff;
+            color: black;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            position: relative;
+            top: 20px;
+        }
+
+        .inputs-section, .results-section {
+            width: 48%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .slider-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .slider-container label {
+            font-weight: bold;
+        }
+
+        .slider-container input[type="range"] {
+            width: 100%;
+        }
+
+        .slider-container span {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .slider-container input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            /* background-color: #28a745; */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        
+
+        .result-box {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .result-box p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .result-box h2 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- topbar -->
+    <div class="rose-bar">
+      <div class="left-section">
+          <!-- Search Button with Icon -->
+          <button class="lily-btn">
+              <img src="magnifying-glass (3).png" alt="Search Icon">
+              
+          </button>
+      </div>
+      <div class="right-section">
+          <!-- Language Dropdown -->
+          <div class="sunflower-dropdown">
+              <button onclick="toggleDropdown(this)">
+                  En <img src="arrow (4).png" alt="Arrow Icon">
+              </button>
+              <div class="sunflower-dropdown-content">
+                  <a href="#">UK,English</a>
+                  <a href="#">Germany, Deutsch</a>
+                  <a href="#">India, English</a>
+                  <a href="#">Japan, 日本語</a>
+
+              </div>
+          </div>
+
+          <!-- Globe Dropdown with Flags -->
+          <div class="sunflower-dropdown">
+              <button onclick="toggleDropdown(this)">
+                  <img src="earth (2).png" alt="Globe Icon">
+              </button>
+              <div class="sunflower-dropdown-content">
+                  <a href="#"><img src="https://img.icons8.com/color/48/000000/germany-circular.png" alt="Germany Flag"> Germany</a>
+                  <a href="#"><img src="https://img.icons8.com/color/48/000000/japan-circular.png" alt="Japan Flag"> Japan</a>
+                  <a href="#"><img src="https://img.icons8.com/color/48/000000/great-britain-circular.png" alt="UK Flag"> UK</a>
+                  <a href="#"><img src="https://img.icons8.com/color/48/000000/india-circular.png" alt="India Flag"> India</a>
+              </div>
+          </div>
+
+          <!-- Contact Number -->
+          <div class="contact"style="position: relative;
+  left: -24px;">
+              (790) 099-8009
+          </div>
+      </div>
+  </div>
+
+   
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+      <div class="logoimg">
+          <a href="index.html"> <!-- Replace with your desired URL -->
+              <img src="logofinal.png" alt="Logo">
+          </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <ul class="nav-links">
+          <li><a href="#">Why S'thetix</a></li>
+          <li><a href="#">Treatments</a>
+              <div class="dropdown-content">
+                  <a href="#">Acne and Acne Scars</a>
+                  <a href="#">Body Sculpting</a>
+                  <a href="#">Eyelid Laxity</a>
+                  <a href="#">Facial Veins</a>
+                  <a href="#">Fine Lines and Wrinkles</a>
+                  <a href="#">Laser Hair Removal</a>
+                  <a href="#">Pigmentation</a>
+                  <a href="#">Rosacea</a>
+                  <a href="#">Skin Tightening</a>
+                  <a href="#">Sun Damage</a>
+                  <a href="#">Varicose Veins</a>
+                  <a href="#">Women's Health</a>
+              </div>
+          </li>
+          <li><a href="#">Platforms</a>
+              <div class="dropdowns1-content">
+                  <div>
+                      <a href="link-to-skin.html">
+                          <img src="all-skins_2.gif" alt="Skin">
+                      </a>
+                      <p>Skin</p>
+                      <hr>
+                      <a href="link-to-face.html">
+                          <img src="all-skins_4.gif" alt="Face">
+                      </a>
+                      <p>Face</p>
+                      <hr>
+                  </div>
+                  <div>
+                      <a href="link-to-hair.html">
+                          <img src="all-skins_3.gif" alt="Hair">
+                      </a>
+                      <p>Hair</p>
+                      <hr>
+                      <a href="link-to-womens-health.html">
+                          <img src="all-skins (2).gif" alt="Women's Health">
+                      </a>
+                      <p>Body</p>
+                      <hr>
+                  </div>
+                  <div>
+                      <a href="link-to-sexual-wellness.html">
+                          <img src="all-skins (3).gif" alt="Sexual Wellness">
+                      </a>
+                      <p>Sexual Wellness</p>
+                      <hr>
+                      <a href="link-to-all-platforms.html">
+                          <img src="Colour 3.gif" alt="All Platforms">
+                      </a>
+                      <p>All Platforms</p>
+                      <hr>
+                  </div>
+              </div>
+              
+              
+              
+          </li>
+          <li><a href="#">Devices</a>
+              <div class="dropdown-content">
+                  <a href="#">Machine 1</a>
+                  <a href="#">Machine 2</a>
+                  <a href="#">Machine 3</a>
+                  <!-- Add more machine items as needed -->
+              </div>
+          </li>
+          <li><a href="#">Technology</a>
+              <div class="dropdowns-content">
+                  <div>
+                      <h3>AURA™</h3>
+                      <p>Deep Fractional RF</p>
+                      <hr>
+                      <h3>CHARISMA™</h3>
+                      <p>Multi-Purpose Platform</p>
+                      <hr>
+                      <h3>ADVATx®</h3>
+                      <p>Yellow + Infrared Laser Energy</p>
+                  </div>
+                  <div>
+                      <h3>VEGACOMFORT™</h3>
+                      <p>Laser Hair Removal</p>
+                      <hr>
+                      <h3>LYRA™</h3>
+                      <p>Women's Health</p>
+                      <hr>
+                      <h3>MICROJET™</h3>
+                      <p>Skin Resurfacing With Nitrogen Plasma</p>
+                  </div>
+                  <div>
+                      <h3>MICROLIFT™</h3>
+                      <p>Face + Neck Sculpting + Tightening</p>
+                      <hr>
+                      <h3>MICROTIGHT™</h3>
+                      <p>Body Sculpting + Tightening</p>
+                      <hr>
+                      <h3>ETERNA™</h3>
+                      <p>Radiofrequency Skin Tightening</p>
+                  </div>
+              </div>
+  
+          </li>
+          <li><a href="roi-calculator.html">ROI Calculator</a></li>
+      </ul>
+      
+      
+      
+      
+  </div>
+
+  <!-- Overlay Menu -->
+  <div id="overlayMenu" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+      <div class="overlay-content">
+          <a href="#">Home</a>
+          <a href="#">Platforms</a>
+          <a href="#">Treatments</a>
+          <a href="#">Machines</a>
+          <a href="#">Technology</a>
+          <a href="#">ROI Calculator</a>
+      </div>
+  </div>
+  <div class="container">
+    <div class="inputs-section">
+        <h1>ROI Calculator</h1>
+        <form id="roi-form">
+            <div class="slider-container">
+                <label for="costEquipment">Cost of Equipment (INR): <span id="costEquipmentValue">100000</span></label>
+                <input type="range" id="costEquipment" min="100000" max="9900000" step="10000" value="100000" oninput="updateValue('costEquipment')">
+                <input type="number" id="costEquipmentInput" value="100000" oninput="syncSlider('costEquipment')">
+            </div>
+
+            <div class="slider-container">
+                <label for="monthlyLease">Monthly Lease Amount (INR): <span id="monthlyLeaseValue">10000</span></label>
+                <input type="range" id="monthlyLease" min="10000" max="500000" step="5000" value="10000" oninput="updateValue('monthlyLease')">
+                <input type="number" id="monthlyLeaseInput" value="10000" oninput="syncSlider('monthlyLease')">
+            </div>
+
+            <div class="slider-container">
+                <label for="treatmentsPerDay">Number of Treatments per Day: <span id="treatmentsPerDayValue">1</span></label>
+                <input type="range" id="treatmentsPerDay" min="1" max="100" step="1" value="1" oninput="updateValue('treatmentsPerDay')">
+                <input type="number" id="treatmentsPerDayInput" value="1" oninput="syncSlider('treatmentsPerDay')">
+            </div>
+
+            <div class="slider-container">
+                <label for="treatmentCost">Treatment Cost (INR): <span id="treatmentCostValue">1000</span></label>
+                <input type="range" id="treatmentCost" min="1000" max="500000" step="1000" value="1000" oninput="updateValue('treatmentCost')">
+                <input type="number" id="treatmentCostInput" value="1000" oninput="syncSlider('treatmentCost')">
+            </div>
+
+            <button type="button" onclick="calculateROI()">Calculate ROI</button>
+        </form>
+    </div>
+
+    <div class="results-section">
+        <div class="result-box">
+            <h2>Annual Profit</h2>
+            <p id="profit">0 INR</p>
+        </div>
+        <div class="result-box">
+            <h2>ROI</h2>
+            <p id="roiPercent">0%</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateValue(id) {
+        const slider = document.getElementById(id);
+        const valueSpan = document.getElementById(id + 'Value');
+        const numberInput = document.getElementById(id + 'Input');
+        valueSpan.textContent = slider.value;
+        numberInput.value = slider.value;
+    }
+
+    function syncSlider(id) {
+        const numberInput = document.getElementById(id + 'Input');
+        const slider = document.getElementById(id);
+        slider.value = numberInput.value;
+        updateValue(id);
+    }
+
+    function calculateROI() {
+        // Get input values
+        const costEquipment = parseFloat(document.getElementById('costEquipment').value);
+        const monthlyLease = parseFloat(document.getElementById('monthlyLease').value);
+        const treatmentsPerDay = parseFloat(document.getElementById('treatmentsPerDay').value);
+        const treatmentCost = parseFloat(document.getElementById('treatmentCost').value);
+
+        // Constants
+        const workingDays = 30;
+
+        // Calculate Total Monthly Revenue
+        const totalMonthlyRevenue = treatmentsPerDay * treatmentCost * workingDays;
+
+        // Calculate Net Monthly Profit
+        const netMonthlyProfit = totalMonthlyRevenue - monthlyLease;
+
+        // Calculate Annual Profit
+        const annualProfit = netMonthlyProfit * 12;
+
+        // Calculate ROI
+        const roiPercent = (annualProfit / costEquipment) * 100;
+
+        // Display results
+        document.getElementById('profit').innerText = annualProfit.toFixed(2) + ' INR';
+        document.getElementById('roiPercent').innerText = roiPercent.toFixed(2) + '%';
+    }
+</script>
+
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-content">
+          <div class="footer-section">
+              <h4>TECHNOLOGY</h4>
+              <ul>
+                  <li><a href="#">ADVATx™ Skin Rejuvenation</a></li>
+                  <li><a href="#">AGEJET™</a></li>
+                  <li><a href="#">Aura™</a></li>
+                  <li><a href="#">Charisma™</a></li>
+                  <li><a href="#">DENZA™</a></li>
+                  <li><a href="#">ETERNA™</a></li>
+                  <li><a href="#">EVLA™</a></li>
+                  <li><a href="#">LYRA™</a></li>
+                  <li><a href="#">MicroLift™</a></li>
+                  <li><a href="#">MicroTight™</a></li>
+                  <li><a href="#">REGAL™</a></li>
+                  <li><a href="#">Vega Comfort™</a></li>
+                  <li><a href="#">Vega Lux™</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>TREATMENTS</h4>
+              <ul>
+                  <li><a href="#">Acne and Acne Scars</a></li>
+                  <li><a href="#">Body Sculpting</a></li>
+                  <li><a href="#">Eyelid Laxity</a></li>
+                  <li><a href="#">Facial Veins</a></li>
+                  <li><a href="#">Fine Lines and Wrinkles</a></li>
+                  <li><a href="#">Laser Hair Removal</a></li>
+                  <li><a href="#">Pigmentation</a></li>
+                  <li><a href="#">Rosacea</a></li>
+                  <li><a href="#">Skin Tightening</a></li>
+                  <li><a href="#">SUN DAMAGE</a></li>
+                  <li><a href="#">Varicose Veins</a></li>
+                  <li><a href="#">Women’s Health</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>Why S'thetix</h4>
+              <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Company Overview </a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">News</a></li>
+                  
+                  
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>CONTACT US</h4>
+              <address>
+                  930 S 4th St., Ste. 209 #2132<br>
+                  Las Vegas, NV 89104<br>
+                  (790) 099-8009<br>
+                  <a href="mailto:info@Sthetix.com">info@Sthetix.com</a>
+              </address>
+              <div class="socials-icons">
+                  <a href="#"><img src="facebook (1).png" alt="Facebook"></a>
+                  <a href="#"><img src="video.png" alt="Instagram"></a>
+                  <a href="#"><img src="twitter (3).png" alt="Twitter"></a>
+                  <a href="#"><img src="youtube (1).png" alt="youtube"></a>
+                  <a href="#"><img src="linkedin (1).png" alt="LinkedIn"></a>
+              </div>
+              
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>©2024 Snnylo Skinnovations Pvt Ltd. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a></p>
+          <div class="footer-logo">
+              <img src="logofinal.png" alt="Sthetix Logo">
+          </div>
+      </div>
+  </footer>
+
+    <script>
+        function updateValue(id) {
+            const slider = document.getElementById(id);
+            const valueSpan = document.getElementById(id + 'Value');
+            const numberInput = document.getElementById(id + 'Input');
+            valueSpan.textContent = slider.value;
+            numberInput.value = slider.value;
+        }
+
+        function syncSlider(id) {
+            const numberInput = document.getElementById(id + 'Input');
+            const slider = document.getElementById(id);
+            slider.value = numberInput.value;
+            updateValue(id);
+        }
+
+        function calculateROI() {
+            // Get input values
+            const costEquipment = parseFloat(document.getElementById('costEquipment').value);
+            const monthlyLease = parseFloat(document.getElementById('monthlyLease').value);
+            const treatmentsPerDay = parseFloat(document.getElementById('treatmentsPerDay').value);
+            const treatmentCost = parseFloat(document.getElementById('treatmentCost').value);
+
+            // Constants
+            const workingDays = 30;
+
+            // Calculate Total Monthly Revenue
+            const totalMonthlyRevenue = treatmentsPerDay * treatmentCost * workingDays;
+
+            // Calculate Net Monthly Profit
+            const netMonthlyProfit = totalMonthlyRevenue - monthlyLease;
+
+            // Calculate Annual Profit
+            const annualProfit = netMonthlyProfit * 12;
+
+            // Calculate ROI
+            const roiPercent = (annualProfit / costEquipment) * 100;
+
+            // Display results
+            document.getElementById('profit').innerText = annualProfit.toFixed(2) + ' INR';
+            document.getElementById('roiPercent').innerText = roiPercent.toFixed(2) + '%';
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
