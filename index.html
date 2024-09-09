@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S'thetix</title>
+    <link href='https://fonts.googleapis.com/css?family=Goldman' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <!-- topbar -->
+    <div class="rose-bar">
+        <div class="left-section">
+            <!-- Search Button with Icon -->
+            <button class="lily-btn">
+                <img src="magnifying-glass (3).png" alt="Search Icon">
+                
+            </button>
+        </div>
+        <div class="right-section">
+            <!-- Language Dropdown -->
+            <div class="sunflower-dropdown">
+                <button onclick="toggleDropdown(this)">
+                    En <img src="arrow (4).png" alt="Arrow Icon">
+                </button>
+                <div class="sunflower-dropdown-content">
+                    <a href="#">UK,English</a>
+                    <a href="#">Germany, Deutsch</a>
+                    <a href="#">India, English</a>
+                    <a href="#">Japan, 日本語</a>
+
+                </div>
+            </div>
+
+            <!-- Globe Dropdown with Flags -->
+            <div class="sunflower-dropdown">
+                <button onclick="toggleDropdown(this)">
+                    <img src="earth (2).png" alt="Globe Icon">
+                </button>
+                <div class="sunflower-dropdown-content">
+                    <a href="#"><img src="https://img.icons8.com/color/48/000000/germany-circular.png" alt="Germany Flag"> Germany</a>
+                    <a href="#"><img src="https://img.icons8.com/color/48/000000/japan-circular.png" alt="Japan Flag"> Japan</a>
+                    <a href="#"><img src="https://img.icons8.com/color/48/000000/great-britain-circular.png" alt="UK Flag"> UK</a>
+                    <a href="#"><img src="https://img.icons8.com/color/48/000000/india-circular.png" alt="India Flag"> India</a>
+                </div>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="contact"style="position: relative;
+    left: -24px;">
+                (790) 099-8009
+            </div>
+        </div>
+    </div>
+
+     
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logoimg">
+            <a href="index.html"> <!-- Replace with your desired URL -->
+                <img src="logofinal.png" alt="Logo">
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Why S'thetix</a></li>
+            <li><a href="#">Treatments</a>
+                <div class="dropdown-content">
+                    <a href="#">Acne and Acne Scars</a>
+                    <a href="#">Body Sculpting</a>
+                    <a href="#">Eyelid Laxity</a>
+                    <a href="#">Facial Veins</a>
+                    <a href="#">Fine Lines and Wrinkles</a>
+                    <a href="#">Laser Hair Removal</a>
+                    <a href="#">Pigmentation</a>
+                    <a href="#">Rosacea</a>
+                    <a href="#">Skin Tightening</a>
+                    <a href="#">Sun Damage</a>
+                    <a href="#">Varicose Veins</a>
+                    <a href="#">Women's Health</a>
+                </div>
+            </li>
+            <li><a href="#">Platforms</a>
+                <div class="dropdowns1-content">
+                    <div>
+                        <a href="link-to-skin.html">
+                            <img src="all-skins_2.gif" alt="Skin">
+                        </a>
+                        <p>Skin</p>
+                        <hr>
+                        <a href="link-to-face.html">
+                            <img src="all-skins_4.gif" alt="Face">
+                        </a>
+                        <p>Face</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <a href="link-to-hair.html">
+                            <img src="all-skins_3.gif" alt="Hair">
+                        </a>
+                        <p>Hair</p>
+                        <hr>
+                        <a href="link-to-womens-health.html">
+                            <img src="all-skins (2).gif" alt="Women's Health">
+                        </a>
+                        <p>Body</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <a href="link-to-sexual-wellness.html">
+                            <img src="all-skins (3).gif" alt="Sexual Wellness">
+                        </a>
+                        <p>Sexual Wellness</p>
+                        <hr>
+                        <a href="link-to-all-platforms.html">
+                            <img src="Colour 3.gif" alt="All Platforms">
+                        </a>
+                        <p>All Platforms</p>
+                        <hr>
+                    </div>
+                </div>
+                
+                
+                
+            </li>
+            <li><a href="#">Devices</a>
+                <div class="dropdown-content">
+                    <a href="#">Machine 1</a>
+                    <a href="#">Machine 2</a>
+                    <a href="#">Machine 3</a>
+                    <!-- Add more machine items as needed -->
+                </div>
+            </li>
+            <li><a href="#">Technology</a>
+                <div class="dropdowns-content">
+                    <div>
+                        <h3>AURA™</h3>
+                        <p>Deep Fractional RF</p>
+                        <hr>
+                        <h3>CHARISMA™</h3>
+                        <p>Multi-Purpose Platform</p>
+                        <hr>
+                        <h3>ADVATx®</h3>
+                        <p>Yellow + Infrared Laser Energy</p>
+                    </div>
+                    <div>
+                        <h3>VEGACOMFORT™</h3>
+                        <p>Laser Hair Removal</p>
+                        <hr>
+                        <h3>LYRA™</h3>
+                        <p>Women's Health</p>
+                        <hr>
+                        <h3>MICROJET™</h3>
+                        <p>Skin Resurfacing With Nitrogen Plasma</p>
+                    </div>
+                    <div>
+                        <h3>MICROLIFT™</h3>
+                        <p>Face + Neck Sculpting + Tightening</p>
+                        <hr>
+                        <h3>MICROTIGHT™</h3>
+                        <p>Body Sculpting + Tightening</p>
+                        <hr>
+                        <h3>ETERNA™</h3>
+                        <p>Radiofrequency Skin Tightening</p>
+                    </div>
+                </div>
+    
+            </li>
+            <li><a href="roi-calculator.html">ROI Calculator</a></li>
+        </ul>
+        
+        
+        
+        
+    </div>
+
+    <!-- Overlay Menu -->
+    <div id="overlayMenu" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">Home</a>
+            <a href="#">Platforms</a>
+            <a href="#">Treatments</a>
+            <a href="#">Machines</a>
+            <a href="#">Technology</a>
+            <a href="#">ROI Calculator</a>
+        </div>
+    </div>
+
+    <!-- Fullscreen Video Background -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="mix.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content-overlay">
+            <h1 class="modern-title">Energy-Driven <span class="bold-aesthetech">Aesthetech</span></h1>
+
+            <h2 class="modern-subtitle">
+                <span class="ai">AI.</span> Aesthetic Intelligence
+              </h2>
+              
+            <p class="modern-text">Elevate your aesthetics & dermatology treatment experience with technology designed to deliver effective results. Discover how S' thetix is bringing a new energy in aesthetic medicine.</p>
+            <div class="buttons">
+                <button class="btn-hover color-1">Find a provider</button>
+                <button class="btn-hover color-2">Become a provider</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Left Content -->
+        <div class="left-content">
+            <h1>Innovation to Skinnovation.<br>Treat . Transform . Transcend </h1>
+            <p>
+                At S' thetix we believe technology & Innovation combined with AI,
+                has the power to change how we see ourselves. Our skin, hair and body 
+                solutions deliver results that brighten, smoother, tone, lift and beyond.
+            </p>
+            <p>
+                Now changing dermatology forever by embracing the wonders of science to unlock new 
+                frontiers of beauty, meanwhile revitalizing the aesthetics with technology.
+            </p>
+            <p>
+                Get the look you want with the latest
+                transformative tretments from S' thetix.
+            </p>
+        </div>
+      
+        <!-- Right Content (Images) -->
+        <div class="right-content">
+            <img src="img1.jpg" alt="Image 1">
+            <img src="img2.jpg" alt="Image 2" class="img2">
+            <img src="img3.jpg" alt="Image 3">
+        </div>
+    </div>
+    <!-- about us -->
+    <div class="lion"></div>
+
+    <div class="elephant">
+      <div class="zebra">
+        <div
+          class="zebra-inner"
+          style="background-image: url(clg3.jpg);"
+        ></div>
+      </div>
+      <div class="tiger">
+        <div class="giraffe">
+          <h1 style="line-height: 1.8;">Innovation to Skinnovation.<br>Treat . Transform . Transcend </h1>
+          <p style="line-height: 1.8;">
+              At S' thetix we believe technology & Innovation combined with AI,
+              has the power to change how we see ourselves. Our skin, hair and body 
+              solutions deliver results that brighten, smoother, tone, lift and beyond.
+          </p>
+          <p style="line-height: 1.8;">
+              Now changing dermatology forever by embracing the wonders of science to unlock new 
+              frontiers of beauty, meanwhile revitalizing the aesthetics with technology.
+          </p>
+          <p style="line-height: 1.8;">
+              Get the look you want with the latest
+              transformative tretments from S' thetix.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="elephant">
+      <div class="zebra">
+        <div
+          class="zebra-inner"
+          style="background-image: url(clg3.jpg);"
+        ></div>
+      </div>
+      <div class="tiger">
+        <div class="giraffe">
+          <h1>IAbout Us</h1>
+          <p style="line-height: 1.8;">
+            S ’thetix is a Japanese-German company specializing in the development 
+            and production of aesthetic medical devices for the health and beauty industry. 
+            Our team of specialists, including doctors, engineers, and technicians, has extensive experience in creating innovative solutions. 
+            We continuously seek the most advanced technologies to offer customized solutions for each client's needs.
+            Our commitment extends to providing quick medical and technical assistance. We aim to address emerging needs in the beauty and healthcare sector with new solutions.
+  
+  
+  
+  
+  
+  
+  
+          </p>
+          <p style="line-height: 1.8;">
+            Our extensive experience of more than 12+ years linked to innovation 
+            allows us to offer patients and professionals the most effective, safe and 
+            profitable technological solutions and treatments on the market. 
+            |   We develop 100% of our production at our central facilities in Japan & 
+            German. 
+          </p>
+          <p style="line-height: 1.8;">
+            S’ thetix is present in more than 6 countries around the world, including 
+            the European Union and other key global markets. 
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(window).scroll(function() {
+        
+        // selectors
+        var $window = $(window),
+            $body = $('body'),
+            $panel = $('.elephant');
+        
+        // Change 33% earlier than scroll position so the effect is visible before reaching the section.
+        var scroll = $window.scrollTop() + ($window.height() / 3);
+       
+        $('.elephant').removeClass('active');
+        
+        $panel.each(function () {
+          var $this = $(this);
+          
+          // Check if the scroll position is within the range of the current section.
+          if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+            $this.addClass('active');
+          }
+        });    
+        
+      }).scroll();
+    </script>
+
+
+
+    <!-- featured products -->
+
+<!-- 
+    <div class="car-heading">
+        <h1>Featured Products</h1>
+    </div>
+    <div class="bus-container">
+        <div class="buses">
+            <div class="bus active-bus">
+                <div class="car-text-content">
+                    <h1>Beautiful from the inside</h1>
+                    <p>Dive into the realm of design ingenuity. Take a closer look at the stunning interiors, meticulously engineered for a seamless integration of form and function.</p>
+                </div>
+                <img src="ring-image.png" alt="Ring" class="car-image">
+            </div>
+            <div class="bus">
+                <div class="car-text-content">
+                    <h1>Elegance Refined</h1>
+                    <p>Experience the pinnacle of luxury with designs that exude sophistication and elegance at every glance.</p>
+                </div>
+                <img src="ring-image2.png" alt="Ring" class="car-image">
+            </div>
+            <div class="bus">
+                <div class="car-text-content">
+                    <h1>Design Beyond Boundaries</h1>
+                    <p>Break the norms with creative designs that push the boundaries of traditional architecture.</p>
+                </div>
+                <img src="ring-image3.png" alt="Ring" class="car-image">
+            </div>
+        </div>
+    </div>
+    <script>
+        const buses = document.querySelectorAll('.bus');
+        let currentIndex = 0;
+        let isScrolling = false;
+
+        function showBus(index) {
+            buses.forEach((bus, i) => {
+                bus.classList.remove('active-bus');
+                if (i === index) {
+                    bus.classList.add('active-bus');
+                }
+            });
+        }
+
+        function nextBus() {
+            currentIndex = (currentIndex < buses.length - 1) ? currentIndex + 1 : 0;
+            showBus(currentIndex);
+        }
+
+        function previousBus() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : buses.length - 1;
+            showBus(currentIndex);
+        }
+
+        // Detect scroll and move to the next bus
+        window.addEventListener('wheel', (event) => {
+            if (!isScrolling) {
+                isScrolling = true;
+                if (event.deltaY > 0) {
+                    nextBus();
+                } else if (event.deltaY < 0) {
+                    previousBus();
+                }
+                requestAnimationFrame(() => isScrolling = false); // Reset scrolling flag smoothly
+            }
+        });
+    </script> -->
+    
+    <!-- platform -->
+     
+
+    <section class="et-hero-tabs">
+        <h1>Featured Products</h1>
+        <h3>----Cutting edge aesthetics----</h3>
+        <div class="et-hero-tabs-container">
+            <a class="et-hero-tab" href="#tab-es6">Skin</a>
+            <a class="et-hero-tab" href="#tab-flexbox">Body</a>
+            <a class="et-hero-tab" href="#tab-react">Hair</a>
+            <a class="et-hero-tab" href="#tab-angular">Face</a>
+            <a class="et-hero-tab" href="#tab-other">Other</a>
+            <span class="et-hero-tab-slider"></span>
+        </div>
+    </section>
+    
+    <main class="et-main">
+        <section class="et-slide" id="tab-es6">
+            <h1>Skin</h1>
+            <h3>something about es6</h3>
+        </section>
+        <section class="et-slide" id="tab-flexbox">
+            <h1>Body</h1>
+            <h3>something about flexbox</h3>
+        </section>
+        <section class="et-slide" id="tab-react">
+            <h1>Hair</h1>
+            <h3>something about react</h3>
+        </section>
+        <section class="et-slide" id="tab-angular">
+            <h1>Face</h1>
+            <h3 style = "font-family: 'Quicksand';line-height: 1.8;font-weight: 300;">Aging process can render changes in the appearance of the face and the neck. A Classical Facelift addresses the change and rejuvenates the cheeks, jowls and neck.
+                We believe into get a natural look and the key to a natural looking face lift is lifting up the deep tissues.</h3>
+        </section>
+        <section class="et-slide" id="tab-other">
+            <h1>Other</h1>
+            <h3>Keep scrolling</h3>
+        </section>
+    </main>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        class StickyNavigation {
+    
+            constructor() {
+                this.currentId = null;
+                this.currentTab = null;
+                this.tabContainerHeight = 70;
+                this.lastScroll = 0;
+                let self = this;
+                $('.et-hero-tab').click(function(event) {
+                    self.onTabClick(event, $(this));
+                });
+                $(window).scroll(() => {
+                    this.onScroll();
+                });
+                $(window).resize(() => {
+                    this.onResize();
+                });
+            }
+    
+            onTabClick(event, element) {
+                event.preventDefault();
+                let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
+                $('html, body').animate({ scrollTop: scrollTop }, 600);
+            }
+    
+            onScroll() {
+                this.checkHeaderPosition();
+                this.findCurrentTabSelector();
+                this.lastScroll = $(window).scrollTop();
+            }
+    
+            onResize() {
+                if (this.currentId) {
+                    this.setSliderCss();
+                }
+            }
+    
+            checkHeaderPosition() {
+                const headerHeight = 75;
+                if ($(window).scrollTop() > headerHeight) {
+                    $('.et-header').addClass('et-header--scrolled');
+                } else {
+                    $('.et-header').removeClass('et-header--scrolled');
+                }
+                let offset = ($('.et-hero-tabs').offset().top + $('.et-hero-tabs').height() - this.tabContainerHeight) - headerHeight;
+                if ($(window).scrollTop() > this.lastScroll && $(window).scrollTop() > offset) {
+                    $('.et-header').addClass('et-header--move-up');
+                    $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top-first');
+                    $('.et-hero-tabs-container').addClass('et-hero-tabs-container--top-second');
+                } else if ($(window).scrollTop() < this.lastScroll && $(window).scrollTop() > offset) {
+                    $('.et-header').removeClass('et-header--move-up');
+                    $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top-second');
+                    $('.et-hero-tabs-container').addClass('et-hero-tabs-container--top-first');
+                } else {
+                    $('.et-header').removeClass('et-header--move-up');
+                    $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top-first');
+                    $('.et-hero-tabs-container').removeClass('et-hero-tabs-container--top-second');
+                }
+            }
+    
+            findCurrentTabSelector() {
+                let newCurrentId;
+                let newCurrentTab;
+                let self = this;
+                $('.et-hero-tab').each(function() {
+                    let id = $(this).attr('href');
+                    let offsetTop = $(id).offset().top - self.tabContainerHeight;
+                    let offsetBottom = $(id).offset().top + $(id).height() - self.tabContainerHeight;
+                    if ($(window).scrollTop() > offsetTop && $(window).scrollTop() < offsetBottom) {
+                        newCurrentId = id;
+                        newCurrentTab = $(this);
+                    }
+                });
+                if (this.currentId != newCurrentId || this.currentId === null) {
+                    this.currentId = newCurrentId;
+                    this.currentTab = newCurrentTab;
+                    this.setSliderCss();
+                }
+            }
+    
+            setSliderCss() {
+                let width = 0;
+                let left = 0;
+                if (this.currentTab) {
+                    width = this.currentTab.css('width');
+                    left = this.currentTab.offset().left;
+                }
+                $('.et-hero-tab-slider').css('width', width);
+                $('.et-hero-tab-slider').css('left', left);
+            }
+    
+        }
+    
+        new StickyNavigation();
+    </script>
+    
+
+    
+
+    
+    <!-- carousel -->
+    
+    <div class="carousel-container">
+        <h2 class="carousel-heading">Top Machines of Treatments</h2>
+        
+    
+        <div class="carousel-slide">
+            <!-- Slide 1 -->
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <h3>ePILLAZE</h3>
+                    <p>Three wavelength diode laser<br>One of the most innovative hair removal systems, three technologies integrated in one handle (755 nm + 808 nm + 1064 nm).</p>
+                    <a href="#" class="btn">More Information</a>
+                </div>
+                <img src="epillaze.png" alt="Eride">
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <h3>Epillaze</h3>
+                    <p>The ultimate diode laser hair removal system<br>Combining two proven technologies to deliver outstanding results.</p>
+                    <a href="#" class="btn">More Information</a>
+                </div>
+                <img src="epillaze2.png" alt="Other Device">
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <h3>Epillaze</h3>
+                    <p>The ultimate diode laser hair removal system<br>Combining two proven technologies to deliver outstanding results.</p>
+                    <a href="#" class="btn">More Information</a>
+                </div>
+                <img src="image2.jpg" alt="Other Device">
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <div class="carousel-content">
+                    <h3>Epillaze</h3>
+                    <p>The ultimate diode laser hair removal system<br>Combining two proven technologies to deliver outstanding results.</p>
+                    <a href="#" class="btn">More Information</a>
+                </div>
+                <img src="image2.jpg" alt="Other Device">
+            </div>
+            <!-- New Slide -->
+            <div class="carousel-item carousel-background">
+                <div class="carousel-overlay">
+                    <blockquote class="carousel-quote">
+                        "Discover an aesthetic laser & energy empire of endless posibilities, boundless innovation and adventure."
+                    </blockquote>
+                    <a href="#" class="btn explore-btn">Explore More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    
+    
+    <!-- missions -->
+     
+    <div class="polaroid-section">
+        <h2>Company Missions</h2>
+        <div class="polaroid-container">
+            <div class="polaroid">
+                <img src="about-mission.jpg" alt="Polaroid 1">
+                <div class="caption">Our Mission</div>
+                <div class="text">This is a brief description of our mission. It highlights our goals and values.</div>
+            </div>
+    
+            <div class="polaroid">
+                <img src="about-plan.jpg" alt="Polaroid 2">
+                <div class="caption">Our Plan</div>
+                <div class="text">This is a brief description of our plan. It outlines our strategy for achieving our goals.</div>
+            </div>
+    
+            <div class="polaroid">
+                <img src="about-vision.jpg" alt="Polaroid 3">
+                <div class="caption">Our Vision</div>
+                <div class="text">This is a brief description of our vision. It describes our long-term objectives and aspirations.</div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- follow us  -->
+    <div class="follow-us-container">
+        <div class="social-icons">
+            <a href="#" class="social-icon instagram">
+                <img src="video.png" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+            <a href="#" class="social-icon facebook">
+                <img src="facebook (1).png" alt="Facebook">
+                <span>Facebook</span>
+            </a>
+            <a href="#" class="social-icon youtube">
+                <img src="youtube (1).png" alt="Youtube">
+                <span>YouTube</span>
+            </a>
+            <a href="#" class="social-icon linkedin">
+                <img src="linkedin (1).png" alt="LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+            <a href="#" class="social-icon twitter">
+                <img src="twitter (3).png" alt="Twitter">
+                <span>Twitter</span>
+            </a>
+        </div>
+    </div>
+    
+    <div class="advantage-section">
+        <h2>OUR ADVANTAGE</h2>
+        <p>With 20 years of experience, sthetix has become the leader in the medical aesthetic industry, and sold more than 100000 units in 200 countries.</p>
+        
+        <div class="advantage-items">
+            <div class="advantage-item">
+                <img src="innovation_10950083.png" alt="20+ Years">
+                <h3>20<sup>+</sup></h3>
+                <p>YEARS</p>
+                <span>Self-Innovation R&D Experience</span>
+            </div>
+            <div class="advantage-item">
+                <img src="certificate_8122738.png" alt="79+ Items">
+                <h3>79<sup>+</sup></h3>
+                <p>ITEMS</p>
+                <span>Registered Technology Patents</span>
+            </div>
+            <div class="advantage-item">
+                <img src="ebook_7672587.png" alt="60+ Items">
+                <h3>60<sup>+</sup></h3>
+                <p>ITEMS</p>
+                <span>International Authoritative Qualifications</span>
+            </div>
+            <div class="advantage-item">
+                <img src="handshake_10086056.png"100000+ Sets">
+                <h3>100000<sup>+</sup></h3>
+                <p>SETS</p>
+                <span>Over 180 Countries & Regions</span>
+            </div>
+        </div>
+    </div>
+    <div class="certifications-section">
+        <img src="5.png" alt="CE">
+        <img src="2 (2).png" alt="FDA">
+        <img src="4 (1).png" alt="ISO">
+        <img src="3 (1).png" alt="RoHS">
+        <img src="1 (2).png" alt="CFDA">
+       
+    </div>
+    <!-- testimonial -->
+    <div>
+        <h2 id="testimonial-heading" style="text-align: center; color: #fff; font-weight: bold; font-size: 2em; margin: 60px 0; opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease;">
+            Our Testimonials
+        </h2>
+    </div>
+    
+    <style>
+        /* Keyframes for fade-up animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        /* Applying the animation */
+        #testimonial-heading {
+            animation: fadeUp 1s ease-out forwards;
+        }
+    </style>
+    
+
+    <!-- testimonoilas -->
+    <div class="tcontainer">
+
+        <div class="tcarousel">
+            <div class="tcarousel-inner">
+                <div class="testimonial-card">
+                    <img src="person1.jpg" alt="Person 1" class="profile-img">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            Hyperscripts is a reliable tech partner, combining excellence with efficiency. Their team's profound understanding of client needs ensures solutions that align perfectly with business objectives.
+                        </p>
+                        <div class="stars">
+                            ★★★★☆
+                        </div>
+                        <div class="testimonial-author">
+                            Sumit Kashyap
+                        </div>
+                        <div class="author-title">
+                            — CEO AT TECH
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <img src="profile2.jpg" alt="Person 2" class="profile-img">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            Their attention to detail and understanding of our unique requirements set them apart. Hyperscripts has delivered outstanding solutions that have significantly enhanced our operations.
+                        </p>
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+                        <div class="testimonial-author">
+                            Anika Sharma
+                        </div>
+                        <div class="author-title">
+                            — COO AT TECH SOLUTIONS
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <img src="profile3.jpg" alt="Person 3" class="profile-img">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            Partnering with Hyperscripts was the best decision we made. Their expertise and dedication have been instrumental in our success.
+                        </p>
+                        <div class="stars">
+                            ★★★★☆
+                        </div>
+                        <div class="testimonial-author">
+                            Rajesh Verma
+                        </div>
+                        <div class="author-title">
+                            — CTO AT INNOVATE INC.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left Arrow -->
+            <svg class="arrow-left2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+
+            <!-- Right Arrow -->
+            <svg class="arrow-right2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </div>
+
+        <div class="form-container">
+            <h2>Get in Touch</h2>
+            <form action="https://api.web3forms.com/submit" method="POST">   
+            <input type="hidden" name="access_key" value="90b1ee8d-7ad8-4e37-98e8-2c8a00968ebe">
+            <input type="text" name="name" required placeholder="Name">
+            <input type="email" name="email" required placeholder="Email">
+            <input type="text" name="phone" required placeholder="Phone Number">
+            <input type="text" name="subject" required placeholder="Subject">
+            <textarea name="message" required placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const carouselInner = document.querySelector('.tcarousel-inner');
+        const nextButton = document.querySelector('.arrow-right2');
+        const prevButton = document.querySelector('.arrow-left2');
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        let index = 0;
+
+        function updateCarousel() {
+            const offset = -index * 100;
+            carouselInner.style.transform = `translateX(${offset}%)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            index = (index + 1) % testimonials.length;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            index = (index - 1 + testimonials.length) % testimonials.length;
+            updateCarousel();
+        });
+
+        // Optional: Auto-slide functionality
+        setInterval(() => {
+            index = (index + 1) % testimonials.length;
+            updateCarousel();
+        }, 5000); // Slide every 5 seconds
+    </script>
+
+
+
+
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h1 class="cta-heading">Let's talk about making something <span class="highlight">amazing</span> together</h1>
+            
+            <a href="contactform.html" class="cta-button">Apply For Meeting →</a>
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>TECHNOLOGY</h4>
+                <ul>
+                    <li><a href="#">ADVATx™ Skin Rejuvenation</a></li>
+                    <li><a href="#">AGEJET™</a></li>
+                    <li><a href="#">Aura™</a></li>
+                    <li><a href="#">Charisma™</a></li>
+                    <li><a href="#">DENZA™</a></li>
+                    <li><a href="#">ETERNA™</a></li>
+                    <li><a href="#">EVLA™</a></li>
+                    <li><a href="#">LYRA™</a></li>
+                    <li><a href="#">MicroLift™</a></li>
+                    <li><a href="#">MicroTight™</a></li>
+                    <li><a href="#">REGAL™</a></li>
+                    <li><a href="#">Vega Comfort™</a></li>
+                    <li><a href="#">Vega Lux™</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>TREATMENTS</h4>
+                <ul>
+                    <li><a href="#">Acne and Acne Scars</a></li>
+                    <li><a href="#">Body Sculpting</a></li>
+                    <li><a href="#">Eyelid Laxity</a></li>
+                    <li><a href="#">Facial Veins</a></li>
+                    <li><a href="#">Fine Lines and Wrinkles</a></li>
+                    <li><a href="#">Laser Hair Removal</a></li>
+                    <li><a href="#">Pigmentation</a></li>
+                    <li><a href="#">Rosacea</a></li>
+                    <li><a href="#">Skin Tightening</a></li>
+                    <li><a href="#">SUN DAMAGE</a></li>
+                    <li><a href="#">Varicose Veins</a></li>
+                    <li><a href="#">Women’s Health</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Why S'thetix</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Company Overview </a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">News</a></li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>CONTACT US</h4>
+                <address>
+                    3rd Floor, BPTP Centra One, Golf Course Ext Rd, Sector 61<br>
+                    Gurugram, Haryana -122011<br>
+                    (790) 099-8009<br>
+                    <a href="mailto:info@Sthetix.com">info@Sthetix.com</a>
+                </address>
+                <div class="socials-icons">
+                    <a href="#"><img src="facebook (1).png" alt="Facebook"></a>
+                    <a href="#"><img src="video.png" alt="Instagram"></a>
+                    <a href="#"><img src="twitter (3).png" alt="Twitter"></a>
+                    <a href="#"><img src="youtube (1).png" alt="youtube"></a>
+                    <a href="#"><img src="linkedin (1).png" alt="LinkedIn"></a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>©2024 Snnylo Skinnovations Pvt Ltd. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a></p>
+            <div class="footer-logo">
+                <img src="logofinal.png" alt="Sthetix Logo">
+            </div>
+        </div>
+    </footer>
+    <!-- WhatsApp Icon -->
+    <a href="https://api.whatsapp.com/send?phone=+919182830417&text=Hi" class="whatsapp-icon" target="_blank">
+        <img src="whatsapp.svg" alt="WhatsApp">
+
+    </a>
+    <!-- scroll indicator -->
+    
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+            </svg>
+        </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        (function($) { "use strict";
+
+            $(document).ready(function() {
+                "use strict";
+
+                var progressPath = document.querySelector('.progress-wrap path');
+                var pathLength = progressPath.getTotalLength();
+                progressPath.style.transition = 'none';
+                progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+                progressPath.style.strokeDashoffset = pathLength;
+                progressPath.getBoundingClientRect();
+                progressPath.style.transition = 'stroke-dashoffset 10ms linear';    
+
+                var updateProgress = function () {
+                    var scroll = $(window).scrollTop();
+                    var height = $(document).height() - $(window).height();
+                    var progress = pathLength - (scroll * pathLength / height);
+                    progressPath.style.strokeDashoffset = progress;
+                }
+
+                updateProgress();
+                $(window).scroll(updateProgress); 
+
+                var offset = 50;
+                var duration = 550;
+                jQuery(window).on('scroll', function() {
+                    if (jQuery(this).scrollTop() > offset) {
+                        jQuery('.progress-wrap').addClass('active-progress');
+                    } else {
+                        jQuery('.progress-wrap').removeClass('active-progress');
+                    }
+                });
+
+                jQuery('.progress-wrap').on('click', function(event) {
+                    event.preventDefault();
+                    jQuery('html, body').animate({scrollTop: 0}, duration);
+                    return false;
+                });
+            });
+
+        })(jQuery);
+    </script>
+    
+      
+      
+    
+    
+
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+   
+
+    <script src="script.js"></script>
+</body>
+
+</html>
