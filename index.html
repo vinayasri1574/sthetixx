@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     
-    <link rel="icon" type="image/svg" href="images/logofav.svg"> 
+    <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
@@ -177,7 +177,7 @@
                 </div>
     
             </li>
-            <li><a href="#">ROI Calculator</a></li>
+            <li><a href="roi-calculator.html">ROI Calculator</a></li>
         </ul>
         
         
@@ -201,7 +201,7 @@
     <!-- Fullscreen Video Background -->
     <div class="video-container">
         <video autoplay muted loop>
-            <source src="video.mp4" type="video/mp4">
+            <source src="mix.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="content-overlay">
@@ -250,6 +250,100 @@
             <img src="img3.jpg" alt="Image 3">
         </div>
     </div>
+    <!-- about us -->
+    <div class="lion"></div>
+
+    <div class="elephant">
+      <div class="zebra">
+        <div
+          class="zebra-inner"
+          style="background-image: url(clg3.jpg);"
+        ></div>
+      </div>
+      <div class="tiger">
+        <div class="giraffe">
+          <h1 style="line-height: 1.8;">Innovation to Skinnovation.<br>Treat . Transform . Transcend </h1>
+          <p style="line-height: 1.8;">
+              At S' thetix we believe technology & Innovation combined with AI,
+              has the power to change how we see ourselves. Our skin, hair and body 
+              solutions deliver results that brighten, smoother, tone, lift and beyond.
+          </p>
+          <p style="line-height: 1.8;">
+              Now changing dermatology forever by embracing the wonders of science to unlock new 
+              frontiers of beauty, meanwhile revitalizing the aesthetics with technology.
+          </p>
+          <p style="line-height: 1.8;">
+              Get the look you want with the latest
+              transformative tretments from S' thetix.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="elephant">
+      <div class="zebra">
+        <div
+          class="zebra-inner"
+          style="background-image: url(clg3.jpg);"
+        ></div>
+      </div>
+      <div class="tiger">
+        <div class="giraffe">
+          <h1>IAbout Us</h1>
+          <p style="line-height: 1.8;">
+            S ’thetix is a Japanese-German company specializing in the development 
+            and production of aesthetic medical devices for the health and beauty industry. 
+            Our team of specialists, including doctors, engineers, and technicians, has extensive experience in creating innovative solutions. 
+            We continuously seek the most advanced technologies to offer customized solutions for each client's needs.
+            Our commitment extends to providing quick medical and technical assistance. We aim to address emerging needs in the beauty and healthcare sector with new solutions.
+  
+  
+  
+  
+  
+  
+  
+          </p>
+          <p style="line-height: 1.8;">
+            Our extensive experience of more than 12+ years linked to innovation 
+            allows us to offer patients and professionals the most effective, safe and 
+            profitable technological solutions and treatments on the market. 
+            |   We develop 100% of our production at our central facilities in Japan & 
+            German. 
+          </p>
+          <p style="line-height: 1.8;">
+            S’ thetix is present in more than 6 countries around the world, including 
+            the European Union and other key global markets. 
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(window).scroll(function() {
+        
+        // selectors
+        var $window = $(window),
+            $body = $('body'),
+            $panel = $('.elephant');
+        
+        // Change 33% earlier than scroll position so the effect is visible before reaching the section.
+        var scroll = $window.scrollTop() + ($window.height() / 3);
+       
+        $('.elephant').removeClass('active');
+        
+        $panel.each(function () {
+          var $this = $(this);
+          
+          // Check if the scroll position is within the range of the current section.
+          if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+            $this.addClass('active');
+          }
+        });    
+        
+      }).scroll();
+    </script>
 
 
 
@@ -344,16 +438,17 @@
             <h3>something about es6</h3>
         </section>
         <section class="et-slide" id="tab-flexbox">
-            <h1>Hair</h1>
+            <h1>Body</h1>
             <h3>something about flexbox</h3>
         </section>
         <section class="et-slide" id="tab-react">
-            <h1>Body</h1>
+            <h1>Hair</h1>
             <h3>something about react</h3>
         </section>
         <section class="et-slide" id="tab-angular">
             <h1>Face</h1>
-            <h3>something about angular</h3>
+            <h3 style = "font-family: 'Quicksand';line-height: 1.8;font-weight: 300;">Aging process can render changes in the appearance of the face and the neck. A Classical Facelift addresses the change and rejuvenates the cheeks, jowls and neck.
+                We believe into get a natural look and the key to a natural looking face lift is lifting up the deep tissues.</h3>
         </section>
         <section class="et-slide" id="tab-other">
             <h1>Other</h1>
@@ -715,13 +810,13 @@
 
         <div class="form-container">
             <h2>Get in Touch</h2>
-            <form action="https://api.web3forms.com/submit" method="POST">
-                
-                <input type="hidden" name="access_key" value="90b1ee8d-7ad8-4e37-98e8-2c8a00968ebe">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="text" name="subject" placeholder="Subject" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <form action="https://api.web3forms.com/submit" method="POST">   
+            <input type="hidden" name="access_key" value="90b1ee8d-7ad8-4e37-98e8-2c8a00968ebe">
+            <input type="text" name="name" required placeholder="Name">
+            <input type="email" name="email" required placeholder="Email">
+            <input type="text" name="phone" required placeholder="Phone Number">
+            <input type="text" name="subject" required placeholder="Subject">
+            <textarea name="message" required placeholder="Message"></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -824,8 +919,8 @@
             <div class="footer-section">
                 <h4>CONTACT US</h4>
                 <address>
-                    930 S 4th St., Ste. 209 #2132<br>
-                    Las Vegas, NV 89104<br>
+                    3rd Floor, BPTP Centra One, Golf Course Ext Rd, Sector 61<br>
+                    Gurugram, Haryana -122011<br>
                     (790) 099-8009<br>
                     <a href="mailto:info@Sthetix.com">info@Sthetix.com</a>
                 </address>
