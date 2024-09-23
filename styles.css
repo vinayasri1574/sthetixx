@@ -3806,3 +3806,15 @@ section:hover .switcher-overlay {
       max-width: 100%;
     }
   }
+.thetix{
+    font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    .thetix {
+        font-size: 19px;
+        text-align: justify;
+        position: relative;
+        margin-right: -153px;
+    }
+
+    }
