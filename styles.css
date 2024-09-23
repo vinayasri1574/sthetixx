@@ -281,13 +281,13 @@ body, html {
     }
 
     .ai {
-        font-size: 70px; /* Slightly smaller size for "AI" */
+        font-size: 60px; /* Slightly smaller size for "AI" */
     }
 
     .modern-text {
         font-size: 1rem; /* Adjusted text size */
         line-height: 1.5; /* Adjusted line height */
-        top: 50px; /* Adjusted top position */
+        top: 65px; /* Adjusted top position */
     }
 }
 
